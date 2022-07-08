@@ -1,29 +1,28 @@
-import React from 'react';
-//Son los elementos que se utilizan para definir rutas
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-//Se importa el archivo layouts para definir las divisiones de nuestra app
+import React from 'react'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
+import Formulario from '../Paginas/Formulario';
 import Layout from '../Componentes/Layouts/Layout';
+import Categoria from '../Paginas/Categoria';
+import Usuario from"../Paginas/Usuario";
+import Modelos from '../Paginas/Modelos';
 
-import Home from '../Paginas/Home';
-import About from '../Paginas/About';
-import Formularios from '../Componentes/Formularios';
-import NotFound from '../Paginas/NotFound';
 
-function Rutas(){
-    return(
-        <div>
-           <Router>
-               <Layout>
-                   <Routes>
-                       <Route exact path="/" element={<Home/>}/>
-                       <Route exact path="/about" element={<About/>}/>
-                       <Route exact path='/formularios' element={<Formularios/>}/>                       
-                       <Route path='*' element={<NotFound/>}/>
-                   </Routes>
-               </Layout>
-           </Router>
-        </div>
-    )
+function Rutas() {
+  return (
+      <div>
+         <Router>
+             <Layout>
+                 <Routes>
+                     <Route exact path="/Formulario" element = {<Formulario/>}/>
+                     <Route exact path='/Categoria'element={<Categoria/>}/>
+                     <Route exact path="/Usuario" element={<Usuario/>}/>
+                     <Route exact path="/Modelos" element={<Modelos/>}/>
+                 </Routes>
+             </Layout>
+         </Router>
+      </div>
+  )
 }
-
+ 
 export default Rutas
