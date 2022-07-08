@@ -41,7 +41,7 @@ function Formulario() {
 
                     <div class="input-field col s12">
                       <input id="last_email" type="text" class="validate" />
-                      <label for="last_email">password</label>
+                      <label for="last_email">Password</label>
                     </div>
 
                   </div>
